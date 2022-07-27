@@ -1,0 +1,919 @@
+/* Import Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: Code Pro;
+    src: url(https://sae.edu.au/wp-content/themes/sae-2021/dist/fonts/codepro/Code-Pro_aca824f0.woff2) format("woff2"),url(/wp-content/themes/sae-2021/dist/fonts/codepro/Code-Pro_7a2df52b.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Code Pro;
+    src: url(https://sae.edu.au/wp-content/themes/sae-2021/dist/fonts/codepro/Code-Pro-Bold_95f1a1a3.woff2) format("woff2"),url(/wp-content/themes/sae-2021/dist/fonts/codepro/Code-Pro-Bold_a8eed37a.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
+
+/* Change this to suit your course */
+:root {
+
+  --primary-font-color: #ffffff;
+  --alt-font-color: #888888;
+  --invert-font-color: #000000;
+  --primary-bg-color: #000000;
+  --invert-bg-color: #ffffff;
+  --banner-bg-color: #f5f5f5;
+  --primary-accent: #ff6900;
+  --secondary-accent: #e93e07;
+  --btn-secondary-default-color: #666666;
+  --btn-secondary-selected-color: #ffffff;
+  --btn-secondary-font-default: #bfbfbf;
+  --gradient-design: linear-gradient(0deg,#b50149,#e7417a);
+  --gradient-orange: linear-gradient(90deg,#ff6900,#e93e07);
+
+  --title: normal 400 40px/48px Code Pro, serif;
+  --h2: normal 400 32px/32px Code Pro, serif;
+  --h2-small: normal 400 26px/26px Code Pro, serif;
+  --h4: normal 400 19px/24px Code Pro, serif;
+  --btn: normal 700 16px/24px Montserrat, sans-serif;
+  --btn-stickynav: normal 500 14px/20px Montserrat, sans-serif;
+  --h5: normal 700 16px/28px Montserrat, sans-serif;
+  --paragraph: normal 500 16px/24px Montserrat, sans-serif;
+  --paragraph-font: Montserrat, sans-serif;
+  --nav-font: normal 500 15px/22px Montserrat, sans-serif;
+
+  --title-padding: 40px 15px;
+  --banner-padding: 20px 15px;
+  --contentblock-padding: 40px 15px;
+  --nav-tab-padding: 10px 5px;
+  
+  --box-shadow-light:  8px 8px 20px #ededed,
+                        -8px -8px 20px #ffffff;
+  --box-shadow-accent:  8px 8px 20px rgba(233, 62, 7, 0.2),
+                        -8px -8px 20px rgba(255, 105, 0, 0.2);
+                        
+  --border-radius: 8px;
+
+}
+
+/* Global styling here */
+/*
+html, body {
+  margin: 0 auto;
+  padding: 0px;
+  background-color: #e9ecef;
+}
+
+.course-content {
+  max-width: 1530px;
+  min-height: 100%;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+*/
+/* Comment out above block before going live !!!!!!!! */
+
+/*.course-content .url .activityinstance, .course-content .forum .activityinstance, .course-content .page .activityinstance, .course-content .assign .activityinstance {
+    position: absolute;
+    visibility: hidden;
+}
+
+.course-content .url .contentafterlink, .course-content .forum .contentafterlink, .course-content .page .contentafterlink, .course-content .assign .contentafterlink {
+    margin-left: 0px!important;
+}*/
+
+.course-content #section-0 .resource .activityinstance, .course-content #section-0 .resource .contentafterlink {
+    position: absolute;
+    visibility: hidden;
+}
+
+.course-content .title {
+  background-color: var(--primary-bg-color);
+  padding: var(--title-padding);
+}
+
+.course-content .rounded-border {
+    border-radius: var(--border-radius)!important;
+}
+
+.course-content h1, .generalbox h1 {
+  font: var(--title);
+  color: var(--primary-font-color);
+  margin: 0;
+}
+
+.course-content h1.invert-color, .generalbox h1.invert-color {
+  color: var(--invert-font-color);
+}
+
+.course-content h2, .generalbox h2 {
+  font: var(--h2);
+  color: var(--invert-font-color);
+  margin-bottom: 25px;
+}
+
+.course-content h2.invert-color, .generalbox h2.invert-color {
+  color: var(--primary-font-color);
+}
+
+.course-content h2 small, .generalbox h2 small {
+  font: var(--h2-small);
+}
+
+.course-content p, .generalbox p {
+  font: var(--paragraph);
+  color: var(--invert-font-color);
+}
+
+.course-content p.invert-color, .generalbox p.invert-color {
+  font: var(--paragraph);
+  color: var(--primary-font-color);
+}
+
+.course-content h4, .generalbox h4 {
+  font: var(--h4);
+}
+
+.course-content h5, .generalbox h5 {
+  font: var(--h5)!important;
+}
+
+.course-content .bg-cover {
+    background-size: cover!important;
+}
+
+.course-content .bg-center {
+    background-position: 50% 50%!important;
+}
+
+.course-content .opaque, .course-content .opaque::before {
+    opacity: 1!important;
+}
+
+.course-content .overlay-gradient, .course-content .overlay-dark, .course-content .overlay-light, .course-content .overlay-gradient-primary {
+    position: relative;
+    border-radius: 8px;
+}
+
+.course-content .overlay-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--gradient-design);
+    display: block;
+    opacity: 0.55;
+    border-radius: 8px;
+}
+
+.course-content .overlay-gradient-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0deg,var(--primary-accent),var(--secondary-accent));
+    display: block;
+    opacity: 0.55;
+    border-radius: 8px;
+}
+
+.course-content .overlay-dark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    display: block;
+    opacity: 0.55;
+    border-radius: 8px;
+}
+
+.course-content .overlay-light::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #ffffff;
+    display: block;
+    opacity: 0.55;
+    border-radius: 8px;
+}
+
+.course-content .overlay-content {
+    /*z-index: 99;*/
+    position: relative;
+}
+
+.course-content .nav-pills-custom {
+    background-color: transparent!important;
+}
+
+.course-content .nav-pills-custom .nav-link {
+    color: var(--alt-font-color);
+    border: 1px solid var(--primary-font-color);
+    background: #fff;
+    position: relative;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0);
+    transition: box-shadow 0.5s, color 0.5s, border 0.5s;
+}
+
+.course-content .nav-pills-custom .nav-link h5 {
+    color: var(--alt-font-color);
+    transition: color 0.5s;
+}
+
+.course-content .nav-pills-custom .nav-link h5 i {
+    font-size: 24px;
+    display: inline-block;
+}
+
+.course-content .nav-pills-custom .nav-link.active {
+    color: var(--primary-font-color);
+    border: 1px solid var(--gradient-orange);
+    background: var(--gradient-orange);
+    text-decoration: none!important;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+}
+
+.course-content .nav-pills-custom .nav-link.active h5 {
+    color: var(--primary-font-color);
+}
+
+.course-content .nav-pills-custom .nav-link:not(.active):hover, .course-content .nav-pills-custom .nav-link:not(.active):focus {
+    color: var(--primary-accent);
+    border: 1px solid var(--primary-accent);
+    background: #fff;
+    text-decoration: none!important;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+    transition: box-shadow 0.5s, color 0.5s, border 0.5s;
+}
+
+.course-content .nav-pills-custom .nav-link:not(.active):hover h5, .course-content .nav-pills-custom .nav-link:not(.active):focus h5 {
+    color: var(--primary-accent);
+    transition: color 0.5s;
+}
+
+/* Add indicator arrow for the active tab */
+@media (min-width: 992px) {
+    .course-content .nav-pills-custom .nav-link::before {
+        content: '';
+        display: block;
+        border-top: 8px solid transparent;
+        border-left: 10px solid var(--secondary-accent);
+        border-bottom: 8px solid transparent;
+        position: absolute;
+        top: 50%;
+        right: -10px;
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+}
+
+.course-content .nav-pills-custom .nav-link.active::before {
+    opacity: 1;
+}
+
+.course-content .caption-2 {
+    position: relative;
+}
+
+.course-content .caption-2 figcaption {
+  position: absolute;
+  max-width: 50%;
+  width: auto;
+  bottom: -1rem;
+  background: rgba(255, 255, 255, 1);
+  border-radius: var(--border-radius);
+}
+
+.course-content .caption-2 figcaption.hang-left {
+    left: -1rem;
+}
+
+.course-content .caption-2 figcaption.hang-right {
+    right: -1rem;
+}
+
+.course-content .caption-2 figcaption.video {
+    bottom: auto;
+    top:101%;
+    right: 0;
+}
+
+.course-content .caption-2 figcaption p {
+    font: normal 500 10px/12px Montserrat, sans-serif;
+    color: var(--invert-font-color);
+}
+
+.course-content kbd {
+    padding: 0.3rem 0.6rem;
+    font-size: 1em;
+    border-radius: 4px;
+}
+
+.course-content .content-block a:not(.btn):not(.nav-link) {
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.5s;
+}
+
+.course-content .content-block a:not(.btn):hover {
+    text-decoration: underline;
+    transition: color 0.5s;
+}
+
+.course-content .alt-bg {
+    background-color: var(--alt-font-color);
+}
+
+.course-content .primary-bg {
+    background-color: var(--primary-bg-color);
+}
+
+.course-content .banner-bg {
+    background-color: var(--banner-bg-color);
+}
+
+.course-content .content-block ul li, .course-content .content-block ol li {
+  font-family: var(--paragraph-font);
+  font-weight: 500;
+  line-height: 2.25rem;
+  font-size: 1rem;
+  color: var(--invert-font-color);
+}
+
+.course-content .course-links {
+    
+}
+
+.course-content .course-links a {
+    display: block;
+    padding: 4em 0;
+    width: 25%;
+    border-radius: 8px;
+    font: var(--btn);
+    text-decoration: none;
+    background-color: transparent;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.course-content .course-links a:hover, .course-content .course-links a:focus  {
+    text-decoration: none;
+    color: var(--invert-font-color);
+    background-color: var(--banner-bg-color);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.course-content .course-links a i {
+    font-size: 45px;
+    display: block;
+}
+
+.course-content .subnav {
+  background-color: var(--primary-bg-color);
+  text-align: center;
+}
+
+.course-content .subnav-inner {
+  padding: var(--banner-padding);
+}
+
+.course-content .sticky {
+  position: fixed;
+  top: 55px;
+  left: 60px;
+  z-index: 2;
+}
+
+.course-content .subnav .dropdown {
+    position: static;
+}
+
+.course-content .subnav .dropdown-menu:not(.show) {
+    position: static;
+    height: 0px;
+    transition: height 0.5s;
+}
+
+.course-content .subnav .dropdown-menu.show {
+  position: static!important;
+  transform: translate3d(0px, 10px, 0px)!important;
+  left: 0px!important;
+  right: 0px!important;
+  background-color: transparent;
+  color: var(--primary-font-color);
+  float: none!important;
+  max-width: 200px;
+  margin: 0 auto;
+  height: auto;
+  transition: height 0.5s;
+}
+
+.course-content .subnav.sticky .dropdown-menu.show {
+  transform: none!important;
+  position: fixed!important;
+  top: 130px!important;
+  left: 0px!important;
+  right: 0px!important;
+  max-width: 100%;
+  background-color: var(--invert-bg-color);
+  will-change: scroll-position!important;
+}
+
+.course-content .subnav .dropdown-menu.show .dropdown-item {
+  font: var(--btn-stickynav);
+  color: var(--primary-font-color);
+  background-color: transparent;
+  text-align: center;
+  border: 2px solid var(--primary-font-color);
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem!important;
+  margin-bottom: 10px;
+  transition: background-color 0.5s;
+}
+
+.course-content .subnav.sticky .dropdown-menu.show .dropdown-item {
+  color: var(--invert-font-color);
+  background-color: var(--invert-bg-color);
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid var(--banner-bg-color);
+  margin-bottom: 0px;
+  padding: 1rem 1.5rem!important;
+  transition: background-color 0.5s;
+}
+
+.course-content .subnav.sticky .dropdown-menu.show .dropdown-item:last-of-type {
+  border: none;
+}
+
+.course-content .subnav.sticky .dropdown-menu.show .dropdown-item:hover {
+  background-color: var(--banner-bg-color);
+  transition: background-color 0.5s;
+}
+
+.course-content .content-block {
+  padding: var(--contentblock-padding);
+  border-top: 1px solid var(--banner-bg-color);
+}
+
+.course-content .content-block .iframe-container {
+  height: 0;
+  padding-bottom: calc(56.25%);
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.course-content .content-block .embed-responsive-item {
+  border: 2px solid var(--banner-bg-color);
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  /*box-shadow:  8px 8px 20px #ededed,
+             -8px -8px 20px #ffffff;*/
+}
+
+.course-content .content-block .img-showcase {
+  border: 2px solid var(--banner-bg-color);
+  border-radius: 8px;
+  /*margin-bottom: 25px!important;*/
+}
+
+.course-content .badge-pill {
+    border-radius: 50px;
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    margin-left: 10px;
+}
+
+.course-content .badge-primary {
+    font-weight: 500;
+    background-color: transparent;
+    border: 2px solid var(--primary-accent);
+    color: var(--primary-accent);
+}
+
+.course-content .banner {
+  padding: var(--banner-padding);
+  background-color: var(--banner-bg-color);
+  scroll-margin: 130px 0 0 0!important;
+}
+
+.course-content .banner i {
+  font-size: 40px;
+  line-height: 48px;
+  color: var(--invert-font-color);
+}
+
+.course-content :target {
+    margin: 130px 0 0 0!important;
+}
+
+.course-content .pull-quote {
+  background-color: var(--banner-bg-color);
+  border-radius: 8px;
+  padding: 40px 15px;
+}
+
+.course-content .btn i, .generalbox .btn i {
+  font-size: 22px;
+  line-height: 24px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.course-content .btn-primary, .generalbox .btn-primary {
+  margin: 15px auto;
+  padding: 10px 40px;
+  background-color: var(--primary-accent)!important;
+  border: none!important;
+  border-radius: 50px!important;
+  color: var(--primary-font-color)!important;
+  font: var(--btn)!important;
+  box-shadow: var(--box-shadow-accent);
+}
+
+.course-content .btn-primary:hover, .course-content .btn-primary:focus, .course-content .btn-primary:active, .generalbox .btn-primary:hover, .generalbox .btn-primary:focus, .generalbox .btn-primary:active  {
+  background-color: var(--secondary-accent)!important;
+  color: var(--primary-font-color)!important;
+  border: none!important;
+}
+
+.course-content .btn-secondary {
+  padding: 7px 15px;
+  margin: auto 10px;
+  background-color: transparent!important;
+  border: 2px solid var(--primary-font-color)!important;
+  border-radius: 50px!important;
+  color: var(--primary-font-color)!important;
+  font: var(--btn-stickynav)!important;
+  opacity: 60%;
+  transition: opacity 0.5s;
+}
+
+.course-content .btn-secondary:hover, .course-content .btn-secondary:focus, .course-content .btn-secondary:active  {
+  background-color: transparent!important;
+  color: var(--primary-font-color)!important;
+  border-color: var(--primary-font-color)!important;
+  opacity: 100%;
+  transition: opacity 0.5s;
+}
+
+.course-content .btn-white {
+  margin: 15px auto;
+  padding: 10px 40px;
+  background-color: transparent!important;
+  border: 2px solid #ffffff!important;
+  border-radius: 50px!important;
+  color: var(--primary-font-color)!important;
+  font: var(--btn)!important;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.course-content .btn-white:hover, .course-content .btn-white:focus, .course-content .btn-white:active  {
+  background-color: #ffffff!important;
+  color: var(--invert-font-color)!important;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.course-content .alert {
+    border-radius: 8px;
+    box-shadow:  8px 8px 20px #ededed,
+             -8px -8px 20px #ffffff;
+}
+
+.course-content .alert-primary {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-font-color);
+}
+
+.course-content .alert-secondary {
+    background-color: var(--banner-bg-color);
+    color: var(--invert-font-color);
+}
+
+.course-content .alert-orange {
+    background-color: var(--primary-accent);
+    color: var(--primary-font-color);
+    box-shadow: var(--box-shadow-accent);
+}
+
+.course-content .alert-orange h2 {
+    color: var(--primary-font-color);
+}
+
+.course-content .alert-primary p {
+    color: var(--banner-bg-color);
+}
+
+.course-content .alert-primary hr, .course-content .alert-primary hr {
+    border-top-color: var(--alt-font-color);
+}
+
+.course-content .alert-secondary h2 {
+    color: var(--primary-accent);
+}
+
+.course-content .alert button.close {
+    color: var(--secondary-accent);
+    text-shadow: none;
+    opacity: 1;
+    font-size: 1.75rem;
+    text-shadow:  none;
+    transition: text-shadow 0.5s, color 0.5s;
+}
+
+.course-content .alert button.close:hover {
+    color: var(--primary-accent);
+    opacity: 1;
+    text-shadow:  0px 0px 20px var(--primary-accent);
+    transition: text-shadow 0.5s, color 0.5s;
+}
+
+.course-content .content-block .card {
+    border: 1px solid var(--primary-bg-color);
+    border-radius: 8px;
+}
+
+.course-content .content-block .card .card-header {
+    border-bottom: 1px solid var(--alt-font-color);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.course-content #accordion .card-header {
+    border-top: 1px solid var(--alt-font-color);
+    border-bottom: 1px solid var(--alt-font-color);
+    margin-top: -1px;
+}
+
+.course-content #accordion button:hover, .course-content #accordion button:focus {
+    text-decoration: none;
+    box-shadow: none;
+}
+
+.course-content .content-block table {
+    width: 100%;
+    display: table;
+}
+
+.course-content .content-block table thead {
+    background-color: var(--banner-bg-color);
+    font: var(--h2);
+    color: var(--invert-font-color);
+}
+
+.course-content .content-block table thead th {
+    padding: 20px 45px;
+    font-weight: 400;
+    text-align: center;
+    border: 1px solid var(--alt-font-color);
+}
+
+.course-content .content-block table tbody td {
+    padding: 10px 20px;
+    border: 1px solid var(--alt-font-color);
+    font: var(--paragraph);
+}
+
+.course-content .section, .course-content .section li.activity, .course-content .section li.label {
+  padding-top: 0px!important;
+  padding-bottom: 0px!important;
+}
+
+.course-content .content-block .list-group {
+    counter-reset: topicnumber;
+}
+
+.course-content .content-block .list-group .list-group-item {
+    counter-increment: topicnumber;
+    padding-left: 100px;
+}
+
+.course-content .content-block .list-group .list-group-item::before {
+    content: counter(topicnumber)" ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -50px;
+    min-width: 100px;
+    height: 100%;
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: center;
+    align-self: stretch!important;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.course-content iframe.h5p-player .h5p-embed {
+
+}
+
+.course-content .mod-indent-outer {
+  display: block;
+  padding-left: 0px!important;
+}
+.course-content .content-block {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.course-content ul.section {
+  padding: 0px!important;
+}
+.course-content .section .activity.modtype_label.label, .course-content .section .activity.modtype_url.url, .course-content .section .activity.modtype_forum.forum, .course-content .section .activity.modtype_page.page {
+  padding: 0px!important;
+  margin: 0px!important;
+}
+
+.course-content .section .activity .no-overflow {
+  overflow: hidden!important;
+}
+
+.profile-card-2 {
+    max-width: 450px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+    /*cursor: pointer;*/
+    border-radius: 8px;
+}
+
+.profile-card-2 img {
+    transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-name {
+    position: absolute;
+    left: 30px;
+    bottom: 7rem;
+    font: normal 400 40px/48px Code Pro, serif;
+    color: #FFF;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+    font-weight: bold;
+    transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-icons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    color: #FFF;
+    background: rgba(0, 0, 0, 0.75);
+    transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-username {
+    position: absolute;
+    bottom: 5rem;
+    left: 30px;
+    color: #FFF;
+    font: normal 400 26px/26px Code Pro, serif;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+    transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-icons .fa {
+    margin: 15px;
+    font-size: 1.75rem;
+    color: var(--primary-accent)!important;
+    transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-icons a:hover .fa {
+    color: var(--secondary-accent)!important;
+    text-shadow: 4px 4px 10px rgba(233, 62, 7, 0.2),
+                        -4px -4px 10px rgba(255, 105, 0, 0.2);
+    transition: all linear 0.25s;
+}
+
+.profile-card-2:hover img {
+    filter: grayscale(100%);
+}
+
+.profile-card-2:hover .profile-name {
+    bottom: 8rem;
+}
+
+.profile-card-2:hover .profile-username {
+    bottom: 6rem;
+}
+/*
+.course-content .nav.nav-tabs {
+    border-bottom: 1px solid var(--banner-bg-color);
+}
+
+.course-content .nav.nav-tabs .nav-item .nav-link {
+    font: var(--nav-font);
+    color: var(--invert-font-color);
+    padding: var(--nav-tab-padding);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: none;
+}
+
+.course-content .nav.nav-tabs .nav-item .nav-link.active {
+    color: var(--invert-font-color);
+    background-color: var(--banner-bg-color);
+    border: 1px solid var(--banner-bg-color);
+    border-bottom: none;
+    font-weight: 700;
+}
+
+.course-content .nav.nav-tabs .nav-item .nav-link:not(.active):hover, .course-content .nav.nav-tabs .nav-item .nav-link:focus  {
+    color: var(--primary-accent);
+    background-color: var(--banner-bg-color);
+    border: 1px solid var(--primary-accent);
+    border-bottom: none;
+}
+
+.course-content .nav.nav-tabs .nav-item:has(a):has(.active) {
+    margin-bottom: -2px;
+}
+*/
+
+@media all and (max-width: 767px) {
+  .course-content h1 {
+    font-size: 28px;
+  }
+  .course-content .course-links a {
+      width: 50%;
+      padding: 2em 0;
+  }
+  .course-content .banner i {
+    font-size: 28px;
+    line-height: 48px;
+  }
+  .course-content h2 {
+    font-size: 22px;
+  }
+  .course-content .sticky {
+    left: 0px;
+  }
+  .course-content .mod-indent-outer {
+      display: block;
+      padding-left: 0px!important;
+  }
+  .course-content .content-block {
+      padding-left: 5px;
+      padding-right: 5px;
+  }
+  .course-content ul.section {
+      padding: 0px!important;
+  }
+  .course-content .section .activity.modtype_label.label {
+      padding: 0px!important;
+      margin: 0px!important;
+  }
+  .course-content .content-block .list-group .list-group-item {
+      padding-left: 15px;
+  }
+  .course-content .content-block .list-group .list-group-item p {
+      font-size: 14px;
+  }
+  .course-content .content-block .list-group .list-group-item::before {
+      position: absolute;
+      visibility: hidden;
+  }
+  .course-content .content-block table thead {
+      font-size: 20px;
+  }
+  .course-content .content-block table thead th {
+      padding: 10px;
+  }
+  .course-content .content-block table tbody td {
+      font-size: 12px;
+      padding: 10px;
+  }
+  .course-content .content-block ul.lead {
+      padding-left: 16px;
+  }
+  .course-content .nav-pills-custom.flex-column {
+      flex-direction: row!important;
+  }
+  .course-content .caption-2 figcaption {
+      width: auto;
+      left: 1rem!important;
+      right: 1rem!important;
+  }
+}
